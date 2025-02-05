@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page présentant la manière dont les agents interagissent avec leur environnement dynamique">
+  <title>Projet GL - Interaction avec l'Environnement</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Interaction avec l'Environnement</h1>
+      <img src="images/logo.png" alt="Logo du Projet" class="logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="concept.html">Concept du Projet</a></li>
+        <li><a href="intelligence.html">Intelligence &amp; Apprentissage</a></li>
+        <li><a href="interaction.html" class="active">Interaction</a></li>
+        <li><a href="equipe.html">Équipe</a></li>
+        <li><a href="demos.html">Démonstrations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a> > <span>Interaction</span>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="#structure">Structure et Dynamique</a></li>
+      <li><a href="#perception">Perception en Temps Réel</a></li>
+      <li><a href="#interactions">Exemples d'Interactions</a></li>
+      <li><a href="#visualisation">Visualisation</a></li>
+      <li><a href="#processus">Processus d'Interaction</a></li>
+    </ul>
+  </aside>
+  
+  <main>
+    <section id="structure">
+      <h2>Structure et Dynamique de l'Environnement</h2>
+      <p>
+        Notre environnement de simulation est modélisé sous forme d'une grille 2D dynamique. Chaque cellule représente une unité spatiale qui peut être configurée pour être <strong>accessible</strong> ou occuper le rôle d'un obstacle. Ce modèle permet d'illustrer visuellement la complexité d'un milieu évolutif, où obstacles et ressources apparaissent et disparaissent de manière aléatoire.
+      </p>
+      <p>
+        Cette approche facilite l'analyse de scénarios variés et met en évidence la capacité des agents à s'adapter à des configurations de plus en plus complexes. La flexibilité de la grille offre également la possibilité d'ajuster la densité des obstacles et des ressources, simulant ainsi différents niveaux de difficulté.
+      </p>
+    </section>
+    
+    <section id="perception">
+      <h2>Perception et Mise à Jour en Temps Réel</h2>
+      <p>
+        Les agents interagissent continuellement avec leur environnement en surveillant l'état de la grille. Lorsqu'un changement survient – comme l'apparition d'un nouvel obstacle ou la disparition d'une ressource – ils déclenchent immédiatement un recalcul de leur trajectoire à l'aide de l'algorithme A*. Ce mécanisme garantit une réactivité optimale face aux imprévus.
+      </p>
+      <p>
+        Ce système de détection en temps réel repose sur des capteurs virtuels qui analysent chaque cellule de la grille. Ainsi, l'agent peut adapter sa stratégie en fonction des informations actualisées et naviguer avec une grande précision.
+      </p>
+    </section>
+    
+    <section id="interactions">
+      <h2>Exemples d'Interactions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Type d'Interaction</th>
+            <th>Description</th>
+            <th>Exemple</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Recalibrage de Trajectoire</td>
+            <td>L'agent ajuste sa route dès qu'un obstacle imprévu bloque son chemin</td>
+            <td>Un obstacle apparaît soudainement sur le trajet planifié</td>
+          </tr>
+          <tr>
+            <td>Réaction aux Ressources</td>
+            <td>L'agent modifie temporairement sa trajectoire pour collecter une ressource intéressante</td>
+            <td>Une ressource est détectée sur une cellule accessible</td>
+          </tr>
+          <tr>
+            <td>Adaptation en Conflit</td>
+            <td>Utilisation de l'algorithme MinMax pour choisir la meilleure option en situation de conflit</td>
+            <td>Deux agents se retrouvent dans un passage étroit et doivent se partager l'espace</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Ce tableau présente divers scénarios illustrant comment les agents réagissent face aux changements soudains de l'environnement, montrant la capacité du système à adapter les stratégies en temps réel.
+      </p>
+    </section>
+    
+    <section id="visualisation">
+      <h2>Visualisation de l'Environnement</h2>
+      <figure>
+        <img src="images/compose_coordinate_system_drawing.png" alt="Simulation de l'environnement dynamique" width="600">
+        <figcaption>Figure 2 : Représentation graphique de la grille et des interactions en temps réel.</figcaption>
+      </figure>
+      <p>
+        L'interface graphique, développée avec Swing (ou JavaFX), offre une visualisation détaillée de l'environnement. Grâce à des codes couleurs (blanc pour les cellules libres, noir pour les obstacles, bleu pour les trajets calculés, etc.), il est facile d'appréhender la dynamique du système et la manière dont les agents s'adaptent aux modifications.
+      </p>
+    </section>
+    
+    <section id="processus">
+      <h2>Processus d'Interaction</h2>
+      <ol>
+        <li>
+          <strong>Observation :</strong> L'agent surveille en continu l'état de la grille grâce à ses capteurs virtuels.
+        </li>
+        <li>
+          <strong>Analyse :</strong> Il détecte toute modification (apparition/disparition d'obstacles, évolution des ressources) et évalue les impacts potentiels.
+        </li>
+        <li>
+          <strong>Réaction :</strong> En réponse, l'agent ajuste immédiatement sa trajectoire et sa stratégie pour maintenir une navigation optimale.
+        </li>
+      </ol>
+      <p>
+        Ce cycle d'observation, d'analyse et de réaction constitue le cœur de l'interaction entre l'agent et son environnement, assurant une adaptation constante aux défis posés par un milieu en évolution.
+      </p>
+    </section>
+    
+    <aside class="complementary">
+      <h3>Informations Complémentaires</h3>
+      <p>
+        La modularité du système permet d'intégrer facilement de nouvelles fonctionnalités et d'ajuster les paramètres de l'environnement. Des améliorations futures pourront inclure l'intégration d'autres algorithmes ou la mise en place de scénarios plus complexes pour tester la robustesse des agents.
+      </p>
+    </aside>
+    
+    <a href="#" class="back-to-top">Retour en haut</a>
+  </main>
+  
+  <footer>
+    <p><a href="contact.html">Contactez-nous</a></p>
+    <img src="images/cyu1.png" alt="Logo CY Cergy Paris Université">
+    <p>UE Développement Web - 2024/2025 -- Mini site réalisé par notre équipe</p>
+    <p>&copy; 2025 Projet Génie Logiciel - Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

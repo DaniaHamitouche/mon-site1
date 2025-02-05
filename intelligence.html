@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page dédiée à la réflexion, à la prise de décision et à l'apprentissage des agents dans notre système intelligent">
+  <title>Projet GL - Intelligence et Apprentissage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Intelligence et Apprentissage</h1>
+      <img src="images/logo.png" alt="Logo du Projet" class="logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="concept.html">Concept du Projet</a></li>
+        <li><a href="intelligence.html" class="active">Intelligence &amp; Apprentissage</a></li>
+        <li><a href="interaction.html">Interaction</a></li>
+        <li><a href="equipe.html">Équipe</a></li>
+        <li><a href="demos.html">Démonstrations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a> > <span>Intelligence &amp; Apprentissage</span>
+    </div>
+  </header>
+  
+  <aside class="sidebar">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="#reflexion">Réflexion de l'Agent</a></li>
+      <li><a href="#algorithmes">Algorithmes de Décision</a></li>
+      <li><a href="#qlearning">Apprentissage par Renforcement</a></li>
+      <li><a href="#comparaison">Comparaison des Algorithmes</a></li>
+      <li><a href="#diagramme">Diagramme du Processus</a></li>
+      <li><a href="#processus">Processus Global</a></li>
+    </ul>
+  </aside>
+  
+  <main>
+    <section id="reflexion">
+      <h2>Comment l'Agent Réfléchit</h2>
+      <p>
+        Dans notre système, chaque agent est doté d'une capacité d'analyse avancée lui permettant d'examiner en continu son environnement. L'algorithme <strong>A*</strong> joue un rôle crucial dans ce processus en déterminant la trajectoire la plus efficace pour atteindre un objectif donné. Grâce à cette méthode, l'agent évalue divers paramètres tels que la distance, le coût du déplacement et la présence d'obstacles pour choisir la meilleure route possible.
+      </p>
+      <p>
+        Ce mécanisme de réflexion repose sur une série d'étapes logiques similaires à la prise de décision humaine. L'agent recueille d'abord des informations sur son environnement, puis il planifie son déplacement en fonction des obstacles détectés et des opportunités qu'il peut exploiter. Cette capacité d'adaptation permet de garantir une navigation fluide même dans des environnements complexes et changeants.
+      </p>
+    </section>
+    
+    <section id="algorithmes">
+      <h2>Algorithmes de Prise de Décision</h2>
+      <p>
+        Pour faire face à des situations impliquant plusieurs choix, l'agent intègre un algorithme de type <strong>MinMax</strong>. Cet algorithme lui permet d'évaluer différentes options en simulant plusieurs scénarios, afin de choisir l'option qui minimise les risques et maximise les gains potentiels. Il s'agit d'une méthode stratégique permettant à l'agent de prendre des décisions éclairées lors de conflits ou d'incertitudes.
+      </p>
+      <p>
+        En associant MinMax à l'approche de recherche de chemin d'A*, l'agent peut non seulement déterminer la route optimale mais aussi anticiper les réactions adverses ou les imprévus. Cela s'avère particulièrement utile lorsque l'environnement présente des variations soudaines ou lorsque plusieurs agents interagissent simultanément.
+      </p>
+    </section>
+    
+    <section id="qlearning">
+      <h2>Apprentissage par Renforcement (Q-learning)</h2>
+      <p>
+        Le <strong>Q-learning</strong> permet aux agents d'apprendre de leurs expériences. Chaque action entreprise est évaluée en fonction d'une récompense ou d'une pénalité, fournissant ainsi un retour qui aide l'agent à optimiser son comportement futur. Cette méthode d'apprentissage par renforcement permet une amélioration progressive de la stratégie de l'agent au fil des interactions avec l'environnement.
+      </p>
+      <p>
+        En intégrant le Q-learning, le système offre une flexibilité d'adaptation en temps réel. L'agent ajuste ses décisions en fonction des succès et des erreurs précédemment rencontrés, ce qui favorise l'émergence d'un comportement de plus en plus autonome et efficace dans des conditions variées.
+      </p>
+    </section>
+    
+    <section id="comparaison">
+      <h2>Comparaison des Algorithmes d'IA</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Algorithme</th>
+            <th>Description</th>
+            <th>Utilisation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A*</td>
+            <td>Recherche du chemin optimal en évaluant plusieurs critères</td>
+            <td>Navigation en temps réel</td>
+          </tr>
+          <tr>
+            <td>MinMax</td>
+            <td>Simulation de scénarios pour prendre des décisions stratégiques</td>
+            <td>Gestion des conflits et des choix multiples</td>
+          </tr>
+          <tr>
+            <td>Q-learning</td>
+            <td>Apprentissage par renforcement à partir de retours sur actions</td>
+            <td>Optimisation continue des comportements</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Ce tableau résume les principaux algorithmes implémentés dans notre système. Chacun contribue de manière spécifique à l'intelligence de l'agent, depuis la navigation jusqu'à l'adaptation des stratégies en situation de conflit.
+      </p>
+    </section>
+    
+    <section id="diagramme">
+      <h2>Diagramme du Processus d'Apprentissage</h2>
+      <figure>
+        <img src="images/Schema-du-processus-dapprentissage-et-de-decision.png" alt="Diagramme illustrant le processus d'apprentissage et de décision des agents" width="600">
+        <figcaption>Figure 1 : Processus d'apprentissage et de prise de décision.</figcaption>
+      </figure>
+      <p>
+        Le diagramme ci-dessus illustre les étapes clés du processus décisionnel de l'agent, depuis la collecte des informations sur l'environnement jusqu'à l'exécution de la décision finale. Il montre comment les algorithmes d'A*, MinMax et Q-learning s'interconnectent pour permettre une adaptation dynamique.
+      </p>
+    </section>
+    
+    <section id="processus">
+      <h2>Processus Global de Décision</h2>
+      <ol>
+        <li>
+          <strong>Perception :</strong> L'agent collecte des données sur son environnement (obstacles, ressources, etc.) grâce à ses capteurs virtuels.
+        </li>
+        <li>
+          <strong>Analyse :</strong> Il évalue les informations recueillies à l'aide des algorithmes A*, MinMax et Q-learning pour déterminer la meilleure stratégie.
+        </li>
+        <li>
+          <strong>Action :</strong> Après avoir sélectionné la solution optimale, l'agent exécute son déplacement ou son interaction, tout en mettant à jour sa base de connaissances.
+        </li>
+      </ol>
+      <p>
+        Ce processus cyclique permet à l'agent de s'améliorer continuellement en affinant ses stratégies et en s'adaptant aux changements de l'environnement.
+      </p>
+    </section>
+    
+    <aside class="complementary">
+      <h3>Informations Complémentaires</h3>
+      <p>
+        La conception modulaire de notre système offre la possibilité d'intégrer ultérieurement d'autres techniques d'apprentissage automatique pour rendre les agents encore plus performants. Plus de détails sont disponibles dans la documentation technique associée au projet.
+      </p>
+    </aside>
+    
+    <a href="#" class="back-to-top">Retour en haut</a>
+  </main>
+  
+  <footer>
+    <p><a href="contact.html">Contactez-nous</a></p>
+    <img src="images/cyu1.png" alt="Logo CY Cergy Paris Université">
+    <p>UE Développement Web - 2024/2025 -- Mini site réalisé par notre équipe</p>
+    <p>&copy; 2025 Projet Génie Logiciel - Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
